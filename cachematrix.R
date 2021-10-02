@@ -5,14 +5,14 @@
 
 makeCacheMatrix <- function(a = matrix()) {
         # var and functions
-        matrizinversa <- NULL
+        matrizinvers <- NULL
         set <- function( b ){
                 a <<- b
                 matrizinversa <<- NULL
                 }
                 get <- function() ( a )
-        setInversa <- function( calculoinversa ) ( matrizinversa <<- calculoinversa )
-        getInversa <- function() ( matrizinversa )
+        setInvers <- function( calculoinvers ) ( matrizinvers <<- calculoinvers )
+        getInvers <- function() ( matrizinvers )
         list( set = set, get = get, setInversa = setInvers, getInvers = getInvers )
         
 }
@@ -29,6 +29,6 @@ cacheSolve <- function(a, ...) {
                  }
         data <- a$get()
         solinvers <- solve(data, ...)
-        x$setInvers(solinversa)
+        x$setInvers(solinvers)
         solinvers
 }
